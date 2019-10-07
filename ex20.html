@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>길동이의 홈페이지</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/bob.ico" />
+		<script>
+			var child=window.open("","","width=300, height=200");
+			var w=screen.width;
+			var h=screen.height;
+			child.document.write("<h1>오늘은 월요일</h1>");
+			child.moveTo(0,0); //윈도우 위치를 절대적으로 이동
+			child.resizeTo(w, h);
+			setInterval(function () {
+				child.resizeBy(-20,-20);
+				child.moveBy(10,10);				
+			},1000);
+			
+		</script>
+	</head>
+	<body>
+		<h1>웹 앱과 하이브리드 앱</h1>
+	</body>
+</html>

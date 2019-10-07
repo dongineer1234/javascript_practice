@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>길동이의 홈페이지</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/bob.ico" />
+		<script>
+		 /*	for(var i=1; true; i++) {
+				alert(i+'번째 반복합니다.');
+				if(!confirm('계속할까요?')){
+					break;	
+				}				
+			}*/
+			var nums=[23,50,78,63,45,90,10,36,75];
+			var sum=0;
+			for(var i=0; i<nums.length; i++) {
+				if(nums[i]%2==1){
+					continue;
+				}
+				sum+=nums[i];
+			}
+			alert('짝수들의 합='+sum);
+		</script>
+	</head>
+	<body>
+		<h1>웹 앱 배우는 중...</h1>
+	</body>
+</html>

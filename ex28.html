@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>길동이의 홈페이지</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/bob.ico" />
+		<style>
+			
+		</style>
+		<script>
+			window.onload=function () {
+				document.getElementById("myform").onsubmit=function () {
+					var pass=document.getElementById("pass").value;
+					var passCheck=document.getElementById("passCheck").value;
+					if(pass!=passCheck){
+						alert("비밀번호와 비밀번호확인이 틀립니다. \n다시 입력해주세요");
+						return false; //이벤트를 제거
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form id="myform" method="post" action="member.jsp">
+			<label for="name">이름</label>
+			<input type="text" id="name" /><br />
+			<label for="pass">비밀번호</label>
+			<input type="password" id="pass" /><br />
+			<label for="passCheck">비밀번호확인</label>
+			<input type="password" id="passCheck" /><br />
+			<input type="submit" value="가입하기" />
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>길동이의 홈페이지</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/bob.ico" />
+		<script>
+			var student= {
+				name:'홍길동',
+				kor:96, eng:70, mat:88
+			}
+			//student.kor=90; //수정
+			//student.age=23; //추가
+			//delete(student.kor); //삭제
+			var output="";
+			with(student) {
+				output+=name+"의 성적표\n";
+				output+="국어:" +kor+"\n"; 
+				output+="영어:" +eng+"\n"; 
+				output+="수어:" +mat+"\n"; 
+				output+="총점:" +(kor+eng+mat)+"\n"; 
+				output+="평균:" +(kor+eng+mat)/3+"\n"; 
+			}
+			alert(output);
+		</script>
+	</head>
+	<body>
+		<h1>웹 앱 배우는 중...</h1>	
+	</body>
+</html>

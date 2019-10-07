@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>길동이의 홈페이지</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/bob.ico" />
+		<script>
+			/*setTimeout(function () {
+				alert('3초가 지났습니다. ㅋㅋ');
+			},3000);*/
+			var ad=['www.kbs.co.kr','www.sbs.co.kr','www.imbc.com'];
+			var count=0;
+			var stop=setInterval(function () {
+				window.open('http://'+ad[count],'','width=400, height=500');
+				count++;
+				if(count>2){
+					count=0;
+				}
+			},5000);
+			function abc() {
+				clearInterval(stop);
+				alert('광고가 중지되었습니다.');
+			}
+		</script>
+	</head>
+	<body>
+		<h1>웹 앱 배우는 중...</h1>
+		<button  onclick="abc()">광고 중지</button>
+	</body>
+</html>

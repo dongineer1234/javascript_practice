@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>길동이의 홈페이지</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/bob.ico" />
+		<style>
+			#target {
+				cursor: pointer;
+				color:red;
+			}
+		</style>
+		<script>
+		window.onload=function () {
+			var count=3;
+			var sale=document.getElementById('target');
+			sale.onclick=function () {
+				count--;
+				alert('구입해 주셔서 고맙습니다.(남은 재고수량='+count+')');			
+				if(count==0) {
+					alert('매진되었습니다.');
+					sale.onclick=null; //이벤트 제거
+					sale.style.cursor='default';
+					sale.style.color='black';
+					sale.innerHTML="냉장고 매진!!";
+				}
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<h1>땡땡마트</h1>
+		<h2 id="target">냉장고</h2>
+	</body>
+</html>

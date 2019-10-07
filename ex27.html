@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>길동이의 홈페이지</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/bob.ico" />
+		<style>
+			
+		</style>
+		<script>
+			window.onload=function () {
+				var b1=document.getElementById("btn1");
+				var b2=document.getElementById("btn2");
+				var c1=document.getElementById("count1");
+				var c2=document.getElementById("count2");
+				b1.onclick=function () {
+					c1.innerHTML=Number(c1.innerHTML)+1;
+				}
+				b2.onclick=function () {
+					c2.innerHTML=Number(c2.innerHTML)+1;
+					
+				}
+				setInterval(function () {
+					b1.onclick();
+				},3000);
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn1">홍길동</button>
+		<button id="btn2">김철수</button>
+		<h1>홍길동 투표수 - <span id="count1">0</span></h1>
+		<h1>김철수 투표수 - <span id="count2">0</span></h1>
+	</body>
+</html>
